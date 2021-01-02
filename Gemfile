@@ -1,5 +1,5 @@
 source 'https://rubygems.org'
-git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+# git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.6.6'
 
@@ -22,10 +22,15 @@ gem 'turbolinks', '~> 5'
 # Use Active Model has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
-gem 'bcrypt',         '3.1.12'
+gem 'bcrypt',         '3.1.12'                 # パスワード暗号化 "Use ActiveModel has_secure_password"
 gem 'rails-i18n'
 
 gem 'bootstrap', '~> 4.5.3'
+gem 'bootstrap-social-rails'                   # bootstrap-social for Rails asset pipeline
+gem 'colorize'                                 # ログの色付け
+gem 'hirb'                                     # モデルの出力結果を表形式で表示するGem
+# gem 'hirb-unicode'                             # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
+gem 'dotenv-rails'                             # 環境変数を管理できるgem
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
@@ -38,6 +43,7 @@ group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
   gem 'pry-rails'
   gem 'rspec-rails'
+  gem 'rails-erd'
 end
 
 group :development do
@@ -45,10 +51,10 @@ group :development do
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
+  # gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-  gem 'rubocop', '1.2.0', require: false
+  gem 'rubocop', require: false
   gem 'rubocop-rails'
   gem 'rubocop-rspec'
   gem 'rubocop-performance'
