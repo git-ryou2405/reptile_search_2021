@@ -30,7 +30,15 @@ gem 'bootstrap-social-rails'                   # bootstrap-social for Rails asse
 gem 'colorize'                                 # ログの色付け
 gem 'hirb'                                     # モデルの出力結果を表形式で表示するGem
 # gem 'hirb-unicode'                             # 日本語などマルチバイト文字の出力時の出力結果のずれに対応
-gem 'dotenv-rails'                             # 環境変数を管理できるgem
+gem 'dotenv-rails'                             # 環境変数を管理できるge
+gem 'devise'
+gem 'devise-i18n'                              # devise日本語化
+gem 'devise-i18n-views'                        # devise日本語化
+gem 'devise-bootstrap-views', '~> 1.0'         # devise日本語化
+gem 'omniauth'
+gem 'omniauth-twitter'                         # Twitter
+gem 'omniauth-facebook'                        # Facebook
+gem 'omniauth-google-oauth2'                   # Google
 
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
