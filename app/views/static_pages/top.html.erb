@@ -1,3 +1,18 @@
 <h1>reptile search</h1>
 
 <%= link_to "Shop index", shops_path %>
+
+
+<ul class="nav">
+  <% if shop_signed_in? %>
+    <li><%= link_to 'ログアウト', destroy_shop_session_path, method: :delete %></li>
+  <% else %>
+    <li class="m-3">
+      <%= icon("fab", "facebook", class: "facebook-icon") %>
+      <%= link_to "Facebookでログイン", shop_facebook_omniauth_authorize_path %>
+      <div class="m-3"></div>
+      <%= icon("fab", "google", class: "google-icon") %>
+      <%= link_to "Googleでログイン", shop_google_oauth2_omniauth_authorize_path %>
+    </li>
+  <% end %>
+</ul>

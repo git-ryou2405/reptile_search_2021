@@ -40,6 +40,7 @@ gem 'omniauth-twitter'                         # Twitter
 gem 'omniauth-facebook'                        # Facebook
 gem 'omniauth-google-oauth2'                   # Google
 
+gem 'font-awesome-sass'
 # Use Active Storage variant
 # gem 'image_processing', '~> 1.2'
 
